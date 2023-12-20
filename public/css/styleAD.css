@@ -1,0 +1,640 @@
+/* CSS cho header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7941d;
+    color: white;
+    padding: 30px 40px;
+}
+/* Ẩn các mục con ban đầu */
+
+
+header .logo h3, header .timKiem form {
+    margin: 0;
+}
+
+header .timKiem input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 400px;
+    height: 40px;
+}
+
+ul.menunav>li>a{
+    display: block;
+    padding-left: 25px;
+    text-decoration: none;
+    color: white;
+}
+ul.menunav>li{
+    display: inline-block;
+    position: relative;
+}
+ul.menunav>li:hover>.conmenu{
+    display: block;
+}
+.conmenu{
+    width: 200px;
+    border-radius: 10px;
+    list-style: none;
+    position: absolute;
+    display: none;
+}
+.conmenu>li>a{
+    display: block;
+    text-decoration: none;
+    line-height: 30px;
+    color: #f7941d;
+    padding-left: 25px;
+    background-color: white;
+}
+.conmenu>li>a:hover{
+    color: white;
+    background-color: orange;
+    padding-right: 30px;
+}
+
+/* CSS cho main */
+main.trangChu{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+article {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px; /* Đặt khoảng cách margin bên phải */
+}
+
+aside {
+    width: 20%;
+}
+
+/* CSS cho sản phẩm trong article */
+/* CSS cho top-article */
+.top-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -20px; /* Để khắc phục lỗi margin-right thừa từ .sanPham */
+}
+
+.top-article .sanPham {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Để chỉnh cỡ hình ảnh */
+.top-article .sanPham img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: 350px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Để chỉnh nút "Đăng ký" */
+.top-article .sanPham .dksp {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.top-article .sanPham:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* CSS cho aside */
+/* CSS cho aside */
+aside {
+    width: 20%;
+    padding: 0 20px 20px 20px;
+    box-sizing: border-box;
+    margin-left: 20px; /* Đặt khoảng cách margin bên trái */
+}
+
+aside .danhMuc, aside .kyHoc {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+aside .danhMuc h3, aside .kyHoc h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+aside .danhMuc ul, aside .kyHoc ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside .danhMuc ul li, aside .kyHoc ul li {
+    margin-bottom: 10px;
+}
+
+aside .danhMuc ul li a, aside .kyHoc ul li a {
+    color: #007bff;
+    font-size: 16px;
+}
+
+aside .danhMuc ul li a:hover, aside .kyHoc ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.danhMuc ul, .kyHoc ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+/* CSS cho footer */
+footer {
+    text-align: center;
+    background-color: #f7941d;
+    color: white;
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+/* CSS cho main.tt */
+main.tt {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px; /* Giảm khoảng cách trên */
+    margin-bottom: 20px; /* Giảm khoảng cách dưới */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Canh giữa các phần tử */
+}
+
+.thongTinSP {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Cùng độ cao với hình ảnh */
+    width: 100%;
+    margin-bottom: 20px; /* Khoảng cách giữa thông tin sản phẩm và mô tả */
+}
+
+.thongTinSP img {
+    max-width: 100%;
+    height: auto;
+}
+
+.thongTin {
+    flex: 0 0 calc(60% - 20px);
+    margin-left: 20px; /* Khoảng cách ra 1 chút */
+}
+
+.thongTin h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.thongTin p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.dkct {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px; /* Điều chỉnh kích thước nút nhấn */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold; /* Đậm chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.dkct:hover {
+    background-color: #0056b3; /* Màu khi hover */
+}
+
+/* CSS cho mô tả sản phẩm */
+.moTa {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.moTa h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.moTa p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* CSS cho các sản phẩm liên quan */
+.cacSanPhamLienQuan {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Khoảng cách giữa sản phẩm liên quan và footer */
+}
+
+.cacSanPhamLienQuan h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.splq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa các sản phẩm liên quan */
+}
+
+.splq .sanPham {
+    flex: 0 0 calc(24% - 20px); /* Điều chỉnh khoảng cách và chiều rộng của sản phẩm liên quan */
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.splq .sanPham img {
+    max-width: 100%;
+    height: auto;
+}
+.dksp {
+    display: inline-block;
+    padding: 5px 15px; /* Điều chỉnh kích thước nút "Đăng ký" */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dksp:hover {
+    background-color: #0056b3;
+}
+
+.xemThem {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px; /* Điều chỉnh kích thước nút "Xem thêm" */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.xemThem:hover {
+    background-color: #0056b3;
+}
+.red{
+    color: red;
+}
+/* CSS cho main.formdk */
+.main.formdk {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    margin-top: 20px;
+}
+
+/* CSS cho phần thông tin sản phẩm */
+.thongTinSP {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    margin-top: 20px;
+}
+
+.thongTinSP img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.thongTin h4 {
+    margin: 10px 0;
+}
+
+/* CSS cho biểu mẫu đăng ký */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang */
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+form button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+/* CSS cho main.donHang */
+main.donHang {
+    /* Hiển thị ở cuối màn hình */
+    display: flex;
+    flex-direction: column; /* Đặt định hướng là cột */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    padding: 20px; /* Khoảng cách nội dung với viền */
+}
+
+/* CSS cho select */
+select {
+    margin-bottom: 10px; /* Khoảng cách phía dưới select */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* CSS cho bảng đơn hàng */
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr.line {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+
+/* Để chặn trường hợp bảng quá dài và cuộn */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Đặt chiều cao 100% của viewport */
+}
+
+footer {
+    margin-top: auto; /* Đẩy footer xuống cuối cùng */
+    text-align: center;
+    background-color: #f7941d;
+    color: white;
+    padding: 10px;
+}
+/* Thêm CSS để định dạng phần select và nút chọn */
+.select-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#donHangSelect {
+    margin-right: 10px; /* Khoảng cách giữa select và button */
+}
+
+button[type="submit"] {
+    padding: 5px 10px; /* Để làm nhỏ kích thước của nút */
+}
+
+/* CSS cho main.taiKhoan */
+.main.taiKhoan {
+    padding: 20px;
+    max-width: 400px; /* Độ rộng tối đa của phần nội dung */
+    margin: 0 auto; /* Căn giữa phần nội dung */
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+}
+
+label {
+    display: block; /* Hiển thị mỗi label trên một dòng */
+    margin-bottom: 10px; /* Khoảng cách giữa các label */
+    font-weight: bold; /* Đậm cho label */
+}
+
+.gray {
+    background-color: #eee; /* Màu nền xám cho các ô input */
+    color: #000; /* Màu chữ đen cho các ô input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 315px;
+    height: 33px;
+}
+
+
+
+button[type="submit"] {
+    background-color: #007bff; /* Màu nút */
+    color: #fff; /* Màu chữ nút */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Đậm cho nút */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Màu nút khi hover */
+}
+main.sach .ttSach-admin table tr td .anhSP img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.tenSach{
+    display: flex;
+}
+.tenSP{
+    margin-left: 3px;
+}
+/* CSS cho main.sach */
+main.sach {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+/* CSS cho tiêu đề trong main.sach */
+main.sach h1 {
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding: 10px;
+    background-color: #f7941d;
+    color: white;
+    border-radius: 5px;
+}
+
+/* CSS cho các đối tượng .ttSach-admin */
+.ttSach-admin {
+    margin-bottom: 30px;
+}
+
+/* CSS cho bảng trong .ttSach-admin */
+.ttSach-admin table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+/* CSS cho dòng tiêu đề trong bảng */
+.ttSach-admin .line {
+    background-color: #f2f2f2;
+}
+
+/* CSS cho các ô trong bảng */
+.ttSach-admin td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* CSS cho hình ảnh trong bảng */
+.ttSach-admin img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* CSS cho tên sách và danh mục */
+.ttSach-admin .tenSach {
+    display: flex;
+    align-items: center;
+}
+
+.ttSach-admin .tenSP {
+    margin-left: 10px;
+}
+
+/* CSS cho nút hành động */
+.ttSach-admin td a {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.ttSach-admin td a:hover {
+    background-color: #0056b3;
+}
+
+/* CSS cho main.addSach */
+main.addSach {
+    max-width: 600px; /* Đặt chiều rộng tối đa của phần này */
+    margin: 20px auto; /* Căn giữa phần nội dung theo chiều ngang */
+    padding: 20px 40px; /* Đặt khoảng cách nội dung và viền */
+    background-color: #f9f9f9; /* Màu nền */
+    border-radius: 10px; /* Bo tròn viền */
+    box-shadow: 0px 0px 5px #ccc; /* Hiệu ứng bóng đổ */
+}
+
+/* CSS cho các label và input */
+main.addSach label {
+    font-weight: bold; /* Đậm cho label */
+    display: block; /* Hiển thị label trên một dòng */
+    margin-top: 10px; /* Khoảng cách từ label đến input */
+}
+
+main.addSach input {
+    width: 100%; /* Độ rộng của input là 100% */
+    padding: 5px 10px; /* Khoảng cách trong input */
+    margin: 5px 0; /* Khoảng cách giữa các input */
+    border-radius: 4px; /* Bo tròn viền của input */
+    border: 1px solid #ccc; /* Viền của input */
+}
+
+/* CSS cho nút Đăng */
+main.addSach button[type="submit"] {
+    background-color: #007bff; /* Màu nút */
+    color: white; /* Màu chữ trên nút */
+    padding: 10px 20px; /* Kích thước của nút */
+    border: none; /* Loại bỏ viền */
+    border-radius: 4px; /* Bo tròn viền nút */
+    cursor: pointer; /* Con trỏ khi hover */
+    font-weight: bold; /* Đậm chữ */
+}
+
+/* CSS khi hover vào nút Đăng */
+main.addSach button[type="submit"]:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+.them {
+    padding: 6px;
+    background-color: #0073e6;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    width: 100px; /* Thay đổi kích thước */
+    text-align: center;
+    cursor: pointer; /* Biểu tượng chuột */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển động */
+}
+
+.them:hover {
+    background-color: #0056b3; /* Màu nền khi rê chuột */
+}

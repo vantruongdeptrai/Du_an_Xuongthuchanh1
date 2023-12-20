@@ -1,0 +1,197 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Thiết lập kiểu cho body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff6dc;
+  }
+  
+  /* Thiết lập kiểu cho header */
+  header {
+    background-color: #fff6dc;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  /* Thiết lập kiểu cho menu chính */
+  ul.menunav > li > a {
+    display: block;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #9e9fa5;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  ul.menunav > li > a:hover {
+    background-color: #ffc6ac;
+  }
+  
+  ul.menunav > li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Thiết lập kiểu cho menu con */
+  ul.menunav > li:hover > .conmenu {
+    display: block;
+  }
+  
+  .conmenu {
+    padding: 0;
+    margin: 0;
+    width: 200px;
+  
+    background-color: #fff6dc;
+    list-style: none;
+    position: absolute;
+    display: none;
+  }
+  
+  .conmenu > li > a {
+    border-bottom: 1px dotted gray;
+    display: block;
+    text-decoration: none;
+    color: #9e9fa5;
+    padding: 10px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .conmenu > li > a:hover {
+    background-color: #9e9fa5;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Thiết lập kiểu cho ô tìm kiếm */
+  .search input[type="search"] {
+    margin-left: -20%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 450px;
+    background-color: #fff;
+  }
+  
+  /* Thiết lập kiểu cho phần user */
+  .user {
+    background-color: #ef2317;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 2%;
+  }
+  .user a {
+    color: aliceblue;
+    text-decoration: none;
+  }
+  .banner {
+    background-image: url(https://stbna.edu.vn/uploads/plugin/gallery/117/1588654894-784901682-banner-h-i-sach.jpg);
+    background-size: 100% 100%; /* Sử dụng 'cover' để bao phủ toàn bộ div */
+    background-position: center; /* Đặt ảnh nền ở giữa div */
+    height: 500px; /* Thiết lập chiều cao của div (tùy chọn) */
+  }
+  .container {
+    margin: 1%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+  }
+  .item {
+    border: 1px solid #ccc;
+    position: relative;
+    height: 400px;
+  }
+  .item a,
+  p {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+    padding: 10px;
+  }
+  button {
+    width: 100%;
+    line-height: 45px;
+    background-color: yellowgreen;
+    border: none;
+  }
+  .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .splq {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+  }
+  .sanPham {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .item {
+    background-color: #c4c1a4;
+  }
+  .page {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50px;
+  }
+  /* CSS cho bảng đơn hàng */
+  table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr.line {
+    background-color: #f2f2f2;
+  }
+  
+  td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  .dk {
+    width: 150px;
+  }
+  /* Làm cho hình ảnh có viền tròn và bóng */
+  .formdk {
+    display: grid;
+  
+    min-height: 464px;
+  }
+  /* Làm cho biểu mẫu có viền vuông và khoảng cách */
+  .form {
+    border: 2px solid white;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Làm cho văn bản trong biểu mẫu có cỡ chữ lớn và căn giữa */
+  .form input,
+  .form button {
+    font-size: 20px;
+    text-align: center;
+  }
+  
