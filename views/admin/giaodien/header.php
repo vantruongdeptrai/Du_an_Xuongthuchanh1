@@ -29,7 +29,15 @@
                     </li>
                 </ul>
             </li>
-                <li><a href="index.php?act=sach">Sách</a></li>
+                <li><a href="index.php?act=sach">Sách</a>
+                <ul class="conmenu">
+                    <li>
+                        <a href="index.php?act=add_sach">Thêm sách</a>
+                    </li>
+                    <li>
+                        <a href="index.php?act=list_sach">Danh sách sách</a>
+                    </li>
+                </ul></li>
                 <li><a href="index.php?act=nguoiDung">Người dùng</a></li>
                 <li><a href="index.php?act=dangXuat">Đăng xuất</a></li>
             </ul>

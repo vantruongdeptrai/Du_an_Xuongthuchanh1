@@ -29,32 +29,32 @@ function getAllCountD($id_d)
 // Lấy thông tin một quyển sách theo ID
 function getOneSach($id)
 {
-    $sql = "SELECT * FROM sach WHERE id_sach=?";
+    $sql = "SELECT * FROM sach WHERE id=?";
     return getData($sql, [$id]);
 }
 
 // Xóa một quyển sách
 function deleteSach($id)
 {
-    $sql = "DELETE FROM sach WHERE id_sach=?";
+    $sql = "UPDATE sach SET trang_thai = 1 WHERE id=?";
     return getData($sql, [$id], false);
 }
 
 // Thêm một quyển sách mới
-function addSach($ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $idDanhMuc, $trangThai)
+function addSach($ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $trangThai, $idDanhMuc)
 {
-    $sql = "INSERT INTO sach (ky, ten_sach, gia_ban, so_luong, hinh_anh, mo_ta, id_danh_muc, trang_thai) 
+    $sql = "INSERT INTO sach (ky, ten_sach, gia_ban, so_luong, hinh_anh, mo_ta, trang_thai,id_danh_muc) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    return getData($sql, [$ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $idDanhMuc, $trangThai], false);
+    return getData($sql, [$ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $trangThai, $idDanhMuc], false);
 }
 
 // Cập nhật thông tin một quyển sách
-function updateSach($ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $idDanhMuc, $trangThai, $id)
+function updateSach($ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $trangThai, $idDanhMuc, $id)
 {
     $sql = "UPDATE sach 
             SET ky=?, ten_sach=?, gia_ban=?, so_luong=?, hinh_anh=?, mo_ta=?, id_danh_muc=?, trang_thai=? 
-            WHERE id_sach=?";
-    return getData($sql, [$ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $idDanhMuc, $trangThai, $id], false);
+            WHERE id=?";
+    return getData($sql, [$ky, $tenSach, $giaBan, $soLuong, $hinhAnh, $moTa, $trangThai, $idDanhMuc, $id], false);
 }
 // Đếm số lượng sách trong một danh mục cụ thể
 function countSachInDanhMuc($idDanhMuc)

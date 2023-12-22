@@ -15,7 +15,7 @@ function getOneDanhMuc($id) {
 
 // Xóa một danh mục
 function deleteDanhMuc($id) {
-    $sql = "DELETE FROM danh_muc WHERE id=?";
+    $sql = "UPDATE danh_muc SET trang_thai = 1 WHERE id=?";
     return getData($sql, [$id], false);
 }
 
